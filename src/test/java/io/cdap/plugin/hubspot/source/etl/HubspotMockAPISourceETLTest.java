@@ -38,7 +38,7 @@ import io.cdap.cdap.test.ApplicationManager;
 import io.cdap.cdap.test.DataSetManager;
 import io.cdap.cdap.test.TestConfiguration;
 import io.cdap.cdap.test.WorkflowManager;
-import io.cdap.plugin.hubspot.common.BaseHubspotConfig;
+import io.cdap.plugin.hubspot.common.SourceHubspotConfig;
 import io.cdap.plugin.hubspot.source.batch.HubspotBatchSource;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -83,9 +83,9 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Contact Lists")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Contact Lists")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -109,9 +109,9 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Contacts")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Contacts")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -135,9 +135,9 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Email Events")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Email Events")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -161,9 +161,9 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Email Subscription")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Email Subscription")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -188,9 +188,9 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Recent Companies")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Recent Companies")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -214,9 +214,9 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Companies")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Companies")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -240,9 +240,9 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Deals")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Deals")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -266,9 +266,9 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Deal Pipelines")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Deal Pipelines")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -288,9 +288,9 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Marketing Email")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Marketing Email")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -314,9 +314,9 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Products")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Products")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -340,9 +340,9 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Tickets")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Tickets")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -366,14 +366,14 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Analytics")
-      .put(BaseHubspotConfig.TIME_PERIOD, "total")
-      .put(BaseHubspotConfig.REPORT_TYPE, "Category")
-      .put(BaseHubspotConfig.REPORT_CATEGORY, "totals")
-      .put(BaseHubspotConfig.START_DATE, "20190101")
-      .put(BaseHubspotConfig.END_DATE, "20191111")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Analytics")
+      .put(SourceHubspotConfig.TIME_PERIOD, "total")
+      .put(SourceHubspotConfig.REPORT_TYPE, "Category")
+      .put(SourceHubspotConfig.REPORT_CATEGORY, "totals")
+      .put(SourceHubspotConfig.START_DATE, "20190101")
+      .put(SourceHubspotConfig.END_DATE, "20191111")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -399,14 +399,14 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Analytics")
-      .put(BaseHubspotConfig.TIME_PERIOD, "total")
-      .put(BaseHubspotConfig.REPORT_TYPE, "Content")
-      .put(BaseHubspotConfig.REPORT_CONTENT, "standard-pages")
-      .put(BaseHubspotConfig.START_DATE, "20190101")
-      .put(BaseHubspotConfig.END_DATE, "20191111")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Analytics")
+      .put(SourceHubspotConfig.TIME_PERIOD, "total")
+      .put(SourceHubspotConfig.REPORT_TYPE, "Content")
+      .put(SourceHubspotConfig.REPORT_CONTENT, "standard-pages")
+      .put(SourceHubspotConfig.START_DATE, "20190101")
+      .put(SourceHubspotConfig.END_DATE, "20191111")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -432,14 +432,14 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Analytics")
-      .put(BaseHubspotConfig.TIME_PERIOD, "total")
-      .put(BaseHubspotConfig.REPORT_TYPE, "Object")
-      .put(BaseHubspotConfig.REPORT_OBJECT, "pages")
-      .put(BaseHubspotConfig.START_DATE, "20190101")
-      .put(BaseHubspotConfig.END_DATE, "20191111")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Analytics")
+      .put(SourceHubspotConfig.TIME_PERIOD, "total")
+      .put(SourceHubspotConfig.REPORT_TYPE, "Object")
+      .put(SourceHubspotConfig.REPORT_OBJECT, "pages")
+      .put(SourceHubspotConfig.START_DATE, "20190101")
+      .put(SourceHubspotConfig.END_DATE, "20191111")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -465,14 +465,14 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Analytics")
-      .put(BaseHubspotConfig.TIME_PERIOD, "summarize/daily")
-      .put(BaseHubspotConfig.REPORT_TYPE, "Category")
-      .put(BaseHubspotConfig.REPORT_CATEGORY, "totals")
-      .put(BaseHubspotConfig.START_DATE, "20190101")
-      .put(BaseHubspotConfig.END_DATE, "20191111")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Analytics")
+      .put(SourceHubspotConfig.TIME_PERIOD, "summarize/daily")
+      .put(SourceHubspotConfig.REPORT_TYPE, "Category")
+      .put(SourceHubspotConfig.REPORT_CATEGORY, "totals")
+      .put(SourceHubspotConfig.START_DATE, "20190101")
+      .put(SourceHubspotConfig.END_DATE, "20191111")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -494,15 +494,15 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Analytics")
-      .put(BaseHubspotConfig.TIME_PERIOD, "daily")
-      .put(BaseHubspotConfig.REPORT_TYPE, "Content")
-      .put(BaseHubspotConfig.REPORT_CONTENT, "standard-pages")
-      .put(BaseHubspotConfig.START_DATE, "20190101")
-      .put(BaseHubspotConfig.END_DATE, "20191111")
-      .put(BaseHubspotConfig.FILTERS, "client")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Analytics")
+      .put(SourceHubspotConfig.TIME_PERIOD, "daily")
+      .put(SourceHubspotConfig.REPORT_TYPE, "Content")
+      .put(SourceHubspotConfig.REPORT_CONTENT, "standard-pages")
+      .put(SourceHubspotConfig.START_DATE, "20190101")
+      .put(SourceHubspotConfig.END_DATE, "20191111")
+      .put(SourceHubspotConfig.FILTERS, "client")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
@@ -523,15 +523,15 @@ public class HubspotMockAPISourceETLTest extends HydratorTestBase {
 
     Map<String, String> properties = new ImmutableMap.Builder<String, String>()
       .put("referenceName", testName.getMethodName())
-      .put(BaseHubspotConfig.API_SERVER_URL, getServerAddress())
-      .put(BaseHubspotConfig.API_KEY, "some-api-key")
-      .put(BaseHubspotConfig.OBJECT_TYPE, "Analytics")
-      .put(BaseHubspotConfig.TIME_PERIOD, "monthly")
-      .put(BaseHubspotConfig.REPORT_TYPE, "Object")
-      .put(BaseHubspotConfig.REPORT_OBJECT, "pages")
-      .put(BaseHubspotConfig.START_DATE, "20190101")
-      .put(BaseHubspotConfig.END_DATE, "20191111")
-      .put(BaseHubspotConfig.FILTERS, "client")
+      .put(SourceHubspotConfig.API_SERVER_URL, getServerAddress())
+      .put(SourceHubspotConfig.API_KEY, "some-api-key")
+      .put(SourceHubspotConfig.OBJECT_TYPE, "Analytics")
+      .put(SourceHubspotConfig.TIME_PERIOD, "monthly")
+      .put(SourceHubspotConfig.REPORT_TYPE, "Object")
+      .put(SourceHubspotConfig.REPORT_OBJECT, "pages")
+      .put(SourceHubspotConfig.START_DATE, "20190101")
+      .put(SourceHubspotConfig.END_DATE, "20191111")
+      .put(SourceHubspotConfig.FILTERS, "client")
       .build();
 
     wireMockRule.stubFor(WireMock.get(
